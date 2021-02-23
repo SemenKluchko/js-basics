@@ -1,6 +1,4 @@
-;
-
-const selectValut = prompt("USD Convertor. Select the currency you want to convert: EUR, UAH, AZN");
+;const selectValut = prompt("USD Convertor. Select the currency you want to convert: EUR, UAH, AZN");
 
 let sum;
 

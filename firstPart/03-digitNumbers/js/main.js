@@ -1,6 +1,4 @@
-;
-
-let numbers = parseInt(
+;let numbers = parseInt(
   prompt("Please type a three-digit numbers"),
 );
 

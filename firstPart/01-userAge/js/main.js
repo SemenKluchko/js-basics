@@ -1,6 +1,4 @@
-;
-
-const userAge = parseInt(
+;const userAge = parseInt(
     prompt('Hello! Please type your age below by numbers.'),
   );
   
