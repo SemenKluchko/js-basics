@@ -1,6 +1,4 @@
-;
-
-const userNum = parseInt(
+;const userNum = parseInt(
   prompt("Please type a number from 0 to 9!"),
 );
 
