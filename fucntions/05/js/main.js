@@ -1,35 +1,21 @@
-// Work in progress! 
 ;const perfectNum = parseInt(
   prompt("Enter number that you want to sort."),
   );
-  
-  const isPerfects = function(num) {
+
   let sum = 0;
-  for ( let i = 1; i < num ; i++ ) {
-    if ( num % i == 0 ) {
-        sum += i;
+
+  const isPerfect = function(num) {
+  for (let i = 1; i < num ; i++) {
+    if (num % i == 0)  {
+        sum += i; 
+     } else {
+       return console.log("No! It's not a perfect number!");
      }
-    if ( sum == num ) {
-          console.log("Perfect number");
-         } else {
-           console.log("Not a perfect number");
-         }
-   
+    if (sum == num) {
+       return console.log("It's perfect number ");
+     } 
+         
   } // end for
+}; // end func
   
-  return;
-  }; // end func
-  
-  
-  console.log(isPerfects(perfectNum));
-  
-  /* function isPerfect(num) {
-  let temp = 0;
-  for (let i = 1; i < num; i++) {
-  if (num % i == 0) temp += i;
-  }
-  if (temp == num) return true;
-  else return false;
-  }
-  
-  console.log(isPerfect(perfectNum)); */
+isPerfect(perfectNum);
