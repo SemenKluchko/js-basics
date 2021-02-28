@@ -10,5 +10,7 @@ let fractionTwo = {
 
 
 function getAddition (a, b) {
-
+  if ( a == b ) {
+    
+  }
 }

@@ -2,7 +2,7 @@
     name: "Audi",
     model: "Q7",
     release: 2018,
-    speed: 156,
+    speed: 100,
     getInfo() {
       confirm(`Some info about auto: ${this.name} ${this.model} released: ${this.release} speed: ${this.speed} km/h`);
     },
