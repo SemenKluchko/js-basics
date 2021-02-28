@@ -12,7 +12,7 @@
       result = Math.trunc(result) + (((result - (Math.trunc(result))) * 60) / 100) 
 
       for (let i = 1; i <= result; i++) {
-        if (i % 5 == 0) {
+        if (i % 4 == 0) {
             result++;
         }
     }
