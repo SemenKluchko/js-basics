@@ -21,10 +21,6 @@ return result;
 getMagazineCheck(check);
 
 // Second Task 
-const calculateTotalPrice = function(sum, list) {
-  const result = sum + list.price;
-  return result;
-}
-const totalPrice = check.reduce(calculateTotalPrice, 0);
+// work in progress
 
-console.log(totalPrice);
+// Third task 
