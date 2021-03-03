@@ -1,4 +1,4 @@
-; let shoppingList = [
+;let shoppingList = [
   { name: "Milk", quantity: 3, bought: "no", },
   { name: "Potatoes", quantity: 5, bought: "yes", },
   { name: "Tomatoes", quantity: 9, bought: "yes", },
@@ -18,27 +18,61 @@ function compareShoppingList(firstItem, secondItem) {
   }
 }
 
-/* console.log( shoppingList.sort(compareShoppingList) ); */
+console.log(shoppingList.sort(compareShoppingList)); 
 
 
 // Second task 
-// Here i have a problem. This work only with one object, but not with array of objects
-const products = { name: "Water", quantity: 7, bought: "no", };
+const products = [
+{ name: "Water", quantity: 7, bought: "no", },
+{ name: "Pork", quantity: 17, bought: "no", },
+{ name: "Cheese", quantity: 7, bought: "no", }
+];
 
-function addItem(shoppingList, newItem) {
-const result = shoppingList.find( list => list.name === products.name);
-return (result) ? result.quantity = result.quantity + products.quantity : shoppingList.push(products);
+function addProductsToList(rowList, newList)
+{
+	let isExists = false;
+	let sizeOfRowList = rowList.length;
+	let sizeOfNewList = newList.length;
+
+	let tmp;
+
+	for(let i = 0; i < sizeOfNewList; ++i)
+	{
+		for(let j = 0; j < sizeOfRowList; ++j)
+		{
+			if(newList[i].name === rowList[j].name)
+			{
+				rowList[j].quantity += newList[i].quantity;
+				isExists = true;
+			}
+			else
+			{
+				tmp = newList[i];
+			}
+		}
+
+		if(!isExists)
+		{
+			rowList.push(tmp);
+		}
+	}
+
+	return rowList;
 }
 
-addItem(shoppingList, products);
+addProductsToList(shoppingList, products);
 console.log(shoppingList);
 
- 
-// Third Task
-function buyCheck(nameOfProduct) {
-// TODO: iteration of array, find name of argument and change bougth to "yes", else = keep product in bought 
-const result = shoppingList.find( list => list.name === products.name);
-} 
 
-buyCheck();
+// Third task
+function bougth(list, productName) {
+  for (let key in list) {
+    if (list[key].name === productName && list[key].bought === "no") {
+      list[key].bought = "yes" ;
+    } 
+    }
+    return list;
+}
 
+bougth(shoppingList, "Water");
+console.log(shoppingList);
