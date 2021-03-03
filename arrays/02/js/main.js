@@ -21,6 +21,14 @@ return result;
 getMagazineCheck(check);
 
 // Second Task 
-// work in progress
+const calculateTotalPrice = function(sum, list) {
+  const result = sum + list.price;
+  return result;
+}
+const totalPrice = check.reduce(calculateTotalPrice, 0);
+
+console.log(totalPrice);
 
 // Third task 
+const result = check.sort(function(a, b){return b.price - a.price});
+console.log ("Biggest price product: " +check[0].name + " " +check[0].price + "$");
