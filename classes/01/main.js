@@ -16,15 +16,11 @@
   }
 
 	calculateArea() {
-   let result = 0;
-   result = 3.14 * Math.pow(this.radius, 2);
-   console.log(result);
+   console.log(Math.PI * Math.pow(this.radius, 2));
   }
 
   calcucateLength() {
-    let result = 0;
-    result = this.diameter * 3.14;
-    console.log(result);
+    console.log(result = this.diameter * Math.PI);
   }
 }
 
