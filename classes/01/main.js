@@ -1,5 +1,5 @@
 ;class Circle {
-	constructor(_radius) {
+	constructor(_radius,_diameter) {
     this.radius = _radius;
  }
 
